@@ -7,3 +7,6 @@
 
 # Third-party reference images (not redistributable)
 sprites/references/
+
+# Exports
+/build/
