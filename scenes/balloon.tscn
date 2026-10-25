@@ -1,28 +1,22 @@
 [gd_scene format=3 uid="uid://pob7uk5aw3bv"]
 
 [ext_resource type="Script" uid="uid://cin5feno0e0hs" path="res://scripts/balloon.gd" id="1_tpd1t"]
+[ext_resource type="SpriteFrames" uid="uid://cnshryhfeoup7" path="res://sprites/balloon.aseprite" id="2_1eawp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
-size = Vector2(6, 20)
+size = Vector2(6, 28)
 
 [node name="Balloon" type="Area2D" unique_id=2101412742]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_tpd1t")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=494987047]
-position = Vector2(0, -10)
-
-[node name="ColorRect" type="ColorRect" parent="Sprite2D" unique_id=1271766494]
-offset_left = -3.0
-offset_top = -10.0
-offset_right = 3.0
-offset_bottom = 10.0
-offset_transform_enabled = true
-metadata/_edit_use_anchors_ = true
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=17342703]
+position = Vector2(0, -16)
+sprite_frames = ExtResource("2_1eawp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1135671081]
-position = Vector2(0, -10)
+position = Vector2(0, -18)
 shape = SubResource("RectangleShape2D_0xm2m")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
