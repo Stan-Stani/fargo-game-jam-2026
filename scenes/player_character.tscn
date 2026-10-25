@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bljq8m100li8a"]
+
+[ext_resource type="Script" uid="uid://5bdjghvit11r" path="res://scripts/player_character/player_character.gd" id="1_6r27q"]
+[ext_resource type="SpriteFrames" uid="uid://cbtl2jdku72xm" path="res://sprites/Crab.aseprite" id="2_kww55"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1eqy6"]
+size = Vector2(7, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(7, 12)
+
+[node name="PlayerCharacter" type="CharacterBody2D" unique_id=155948796]
+collision_layer = 2
+script = ExtResource("1_6r27q")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=629870863]
+sprite_frames = ExtResource("2_kww55")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=700752023]
+position = Vector2(-1, 0)
+
+[node name="HurtBoxCollisionShape" type="CollisionShape2D" parent="HurtBox" unique_id=28293118]
+position = Vector2(1.5, 2)
+shape = SubResource("RectangleShape2D_1eqy6")
+debug_color = Color(0.95686275, 0, 0.7882353, 0.76862746)
+
+[node name="BarrierCollisionShape" type="CollisionShape2D" parent="." unique_id=1446603985]
+position = Vector2(0.5, 1.656)
+shape = SubResource("RectangleShape2D_0xm2m")

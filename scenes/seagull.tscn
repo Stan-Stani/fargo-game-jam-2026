@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c4viuxraov1l7"]
+
+[ext_resource type="Script" uid="uid://bp6pfutqys07q" path="res://scripts/seagull.gd" id="1_8xdhb"]
+[ext_resource type="SpriteFrames" uid="uid://cm2pxslhtougi" path="res://sprites/seagull.aseprite" id="2_or5sd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1eqy6"]
+size = Vector2(14, 4)
+
+[node name="Seagull" type="Area2D" unique_id=137030476]
+script = ExtResource("1_8xdhb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1390577009]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_1eqy6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=920289407]
+unique_name_in_owner = true
+sprite_frames = ExtResource("2_or5sd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

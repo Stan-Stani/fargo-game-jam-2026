@@ -1,0 +1,63 @@
+[gd_scene format=4 uid="uid://cfo5ldgvlw57e"]
+
+[ext_resource type="Texture2D" uid="uid://qxhkry3u5gdt" path="res://sprites/terrain.aseprite" id="1_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://bljq8m100li8a" path="res://scenes/player_character.tscn" id="2_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://pob7uk5aw3bv" path="res://scenes/balloon.tscn" id="3_tefeu"]
+[ext_resource type="PackedScene" uid="uid://85hngjffr5pp" path="res://scenes/shark.tscn" id="4_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://c4viuxraov1l7" path="res://scenes/seagull.tscn" id="5_tbgi4"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_h2yge"]
+tile_data = PackedInt32Array(0, 65536, 0, 1, 262144, 0)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
+texture = ExtResource("1_jyhfs")
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0/terrains_peering_bit/right_side = 0
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/terrain_set = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0/terrains_peering_bit/left_side = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:0/next_alternative_id = 2
+10:0/0 = 0
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1eqy6"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
+terrain_set_0/mode = 2
+terrain_set_0/terrain_0/name = "sand"
+terrain_set_0/terrain_0/color = Color(0.6600487, 0.0010140187, 0.77014697, 1)
+sources/0 = SubResource("TileSetAtlasSource_1bvp3")
+pattern_0 = SubResource("TileMapPattern_h2yge")
+
+[node name="Main" type="Node2D" unique_id=757795937]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1353332320]
+tile_map_data = PackedByteArray("AAABAAgAAAAEAAAAAAACAAgAAAABAAAAAAAEAAgAAAAJAAAAAAAFAAgAAAALAAAAAAAGAAgAAAAGAAAAAAAHAAgAAAAFAAAAAAAIAAgAAAAGAAAAAAAJAAgAAAAFAAAAAAAKAAgAAAAGAAAAAAALAAgAAAAFAAAAAAABAAkAAAADAAAAAAAFAAoAAAAAAAEAAAAFAAsAAAAAAAEAAAAFAA4AAAAKAAAAAAAFAA0AAAAAAAEAAAAFAAwAAAAAAAEAAAAFAAkAAAAAAAEAAAAGAAkAAAAHAAAAAAAHAAkAAAAIAAAAAAAIAAkAAAAHAAAAAAAJAAkAAAAIAAAAAAAKAAkAAAAHAAAAAAALAAkAAAAIAAAAAAAHAAoAAAAHAAAAAAAGAAoAAAAIAAAAAAAIAAoAAAAIAAAAAAAJAAoAAAAHAAAAAAAKAAoAAAAIAAAAAAALAAoAAAAHAAAAAAACAAkAAAACAAAAAAADAAkAAAADAAAAAAAEAAkAAAAKAAAAAAAEAAoAAAAKAAAAAAAEAAsAAAAKAAAAAAAEAAwAAAAKAAAAAAAEAA0AAAAKAAAAAAAEAA4AAAAKAAAAAAAAAAkAAAACAAAAAAABAAoAAAACAAAAAAAAAAoAAAADAAAAAAACAAoAAAADAAAAAAADAAoAAAACAAAAAAAAAAsAAAACAAAAAAAAAAwAAAADAAAAAAABAAwAAAACAAAAAAACAAsAAAACAAAAAAACAAwAAAADAAAAAAADAAsAAAADAAAAAAADAAwAAAACAAAAAAABAAsAAAADAAAAAAAAAA0AAAACAAAAAAAAAA4AAAAKAAAAAAABAA0AAAADAAAAAAABAA4AAAAKAAAAAAACAA0AAAACAAAAAAACAA4AAAAKAAAAAAADAA0AAAADAAAAAAADAA4AAAAKAAAAAAAGAAsAAAAHAAAAAAAGAAwAAAAIAAAAAAAHAAsAAAAIAAAAAAAHAAwAAAAHAAAAAAAIAAsAAAAHAAAAAAAIAAwAAAAIAAAAAAAJAAsAAAAIAAAAAAAJAAwAAAAHAAAAAAAKAAsAAAAHAAAAAAAKAAwAAAAIAAAAAAALAAsAAAAIAAAAAAALAAwAAAAHAAAAAAAGAA0AAAAHAAAAAAAGAA4AAAAKAAAAAAAHAA0AAAAIAAAAAAAHAA4AAAAKAAAAAAAIAA0AAAAHAAAAAAAIAA4AAAAKAAAAAAAJAA0AAAAIAAAAAAAJAA4AAAAKAAAAAAAKAA0AAAAHAAAAAAAKAA4AAAAKAAAAAAALAA0AAAAIAAAAAAALAA4AAAAKAAAAAAADAAgAAAAEAAAAAAAAAAgAAAABAAAAAAAFAA8AAAAKAAAAAAAGAA8AAAAKAAAAAAAHAA8AAAAKAAAAAAAIAA8AAAAKAAAAAAAJAA8AAAAKAAAAAAAKAA8AAAAKAAAAAAALAA8AAAAKAAAAAAAEAA8AAAAKAAAAAAAAAA8AAAAKAAAAAAABAA8AAAAKAAAAAAACAA8AAAAKAAAAAAADAA8AAAAKAAAAAAA=")
+tile_set = SubResource("TileSet_1eqy6")
+
+[node name="PlayerCharacter" parent="." unique_id=155948796 groups=["player"] instance=ExtResource("2_tbgi4")]
+position = Vector2(79, 120)
+
+[node name="Balloon" parent="." unique_id=2101412742 instance=ExtResource("3_tefeu")]
+position = Vector2(52, 118)
+
+[node name="Shark" parent="." unique_id=419917061 instance=ExtResource("4_o6xl0")]
+position = Vector2(125, 176)
+
+[node name="Seagull" parent="." unique_id=137030476 instance=ExtResource("5_tbgi4")]
+position = Vector2(124, 57)
