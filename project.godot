@@ -30,6 +30,7 @@ enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg")
 [global_group]
 
 player=""
+health_ui_component=""
 
 [input]
 

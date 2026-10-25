@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://d4myi06lsq5ls"]
+
+[ext_resource type="Script" uid="uid://biuj86tlwt67s" path="res://scripts/health_component.gd" id="1_sess2"]
+[ext_resource type="SpriteFrames" uid="uid://b2dqwhoceu5vv" path="res://sprites/heart.aseprite" id="2_hx0f8"]
+
+[node name="HealthUIComponent" type="Control" unique_id=1698279621]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_sess2")
+
+[node name="Heart1" type="AnimatedSprite2D" parent="." unique_id=1785358319]
+unique_name_in_owner = true
+position = Vector2(5, 5)
+sprite_frames = ExtResource("2_hx0f8")
+
+[node name="Heart2" type="AnimatedSprite2D" parent="." unique_id=198163154]
+unique_name_in_owner = true
+position = Vector2(15, 5)
+sprite_frames = ExtResource("2_hx0f8")
+
+[node name="Heart3" type="AnimatedSprite2D" parent="." unique_id=1322813923]
+unique_name_in_owner = true
+position = Vector2(25, 5)
+sprite_frames = ExtResource("2_hx0f8")

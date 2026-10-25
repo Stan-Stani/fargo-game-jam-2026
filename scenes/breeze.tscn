@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cqlqkc6mdw14s"]
+
+[ext_resource type="Script" uid="uid://cb6yamv6qj27a" path="res://scripts/breeze.gd" id="1_ep3i1"]
+[ext_resource type="SpriteFrames" uid="uid://cfsm6om3ns3hg" path="res://sprites/breeze.aseprite" id="1_j6ss7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1eqy6"]
+size = Vector2(32, 13)
+
+[node name="Breeze" type="Area2D" unique_id=1332841641]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_ep3i1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1881696448]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_1eqy6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=593123688]
+sprite_frames = ExtResource("1_j6ss7")
+autoplay = "default"
+frame_progress = 0.03786211
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

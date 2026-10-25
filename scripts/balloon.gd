@@ -20,5 +20,5 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body == player && !is_player_attached:
 		is_player_attached = true
-		player.gravity_scale = .5
+		player.set_balloon_is_attached(true, self)
 	

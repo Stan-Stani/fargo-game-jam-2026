@@ -14,6 +14,7 @@ collision_layer = 2
 script = ExtResource("1_6r27q")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=629870863]
+unique_name_in_owner = true
 sprite_frames = ExtResource("2_kww55")
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=700752023]
