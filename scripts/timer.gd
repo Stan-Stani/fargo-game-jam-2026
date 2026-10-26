@@ -10,7 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-var start_time := 20
+@export var start_time := 20
 func _on_timeout() -> void:
 	start_time -= 1
 	%TimerRichTextLabel.text = str(start_time)
